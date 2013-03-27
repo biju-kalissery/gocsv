@@ -4,15 +4,16 @@ import(
 	"fmt"
 )
 
-
-
 func Demo(){
 
-	file:="demo_read.csv"
+	//file:="demo_read.csv"
+	file:="e:\\Desktop\\import.csv"
 
 	csv:=LoadFile(file)
 
-	fmt.Println(csv.headerRow)
+	csv.ShowContent()
+
+	fmt.Println(csv.GetHeaderRow())
 
 	fmt.Println("Columns: ", csv.GetColumns())
 	fmt.Println("Rows: ", csv.GetRows())

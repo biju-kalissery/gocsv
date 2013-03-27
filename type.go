@@ -1,5 +1,6 @@
 package gocsv
 
+// define CSV
 type CSV struct{
 	data [][]string
 	headerRow []string
@@ -14,13 +15,13 @@ type Writer interface{
 	Write(file string,v ...interface{})
 }
 
-type a interface{
-	GetRows()
-	GetColumns()
-	GetRow(row int)
-	GetColumn(col int)
-	Next()
-	GetString(row int)
+// interface of CSV
+type ICSV interface{
+	GetRows() int
+	GetColumns() int
+	GetRow(row int) []string
+	GetColumn(col int) []string
+	Next()bool
+	GetString(row int,column int) string
 }
-
 
