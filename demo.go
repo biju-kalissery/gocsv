@@ -6,13 +6,9 @@ import(
 
 func Demo(){
 
-	//file:="demo_read.csv"
-	file:="e:\\Desktop\\import.csv"
-
+	file:="demo_read.csv"
 	csv:=LoadFile(file)
-
 	csv.ShowContent()
-
 	fmt.Println(csv.GetHeaderRow())
 
 	fmt.Println("Columns: ", csv.GetColumns())
